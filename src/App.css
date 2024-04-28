@@ -1,38 +1,909 @@
-.App {
-  text-align: center;
+/* =========================== Typography =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body,
+html {
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ================================================================== */
+
+/* =========================== Hero Section - Start =========================== */
+
+.hero_section {
   display: flex;
   flex-direction: column;
+  background-color: lightcoral;
+  padding: 4vmin 12vmin;
+  height: 100vh;
+}
+
+.hero_section .hero_top_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  align-content: center;
+}
+
+.location {
+  background-color: rgba(128, 128, 128, 0.274);
+  padding: 1.3vmin 2vmin;
+  border-radius: 1vmin;
+  color: white;
+  font-size: 2.4vmin;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.location i {
+  font-size: 2.3vmin;
+  padding-right: 1vmin;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.user .list_property {
+  background-color: rgba(128, 128, 128, 0.274);
+  padding: 1.3vmin 2vmin;
+  border-radius: 1vmin;
+  color: white;
+  font-size: 2.5vmin;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-right: 4vmin;
+}
+
+.user i {
+  background-color: rgba(128, 128, 128, 0.274);
+  padding: 1.5vmin 1.7vmin;
+  border-radius: 1vmin;
+  color: white;
+  font-size: 2.5vmin;
+  letter-spacing: 1px;
+}
+
+.hero_text {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  align-content: center;
+  padding: 8vmin;
+}
+
+.hero_text h1 {
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 2vmin;
+  
+  font-size: 8vmin;
+  font-size: 12vmin;
+  /* border: 2px solid white; */
+}
+
+.hero_text p {
+  color: white;
+  font-size: 4vmin;
+  letter-spacing: 1px;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.sections .section_mode {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.sections .section_mode a {
+  width: 50%;
+  padding: 2.5vmin 0;
+  text-decoration: none;
+  font-size: 2.5vmin;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+}
+
+.sections .section_mode .real_estate {
+  background-color: #fff;
+  border-top-left-radius: 2vmin;
+  border-bottom-left-radius: 2vmin;
+  color: #171717ab;
+}
+
+.sections .section_mode .services {
+  background-color: rgba(128, 128, 128, 0.274);
+  border-top-right-radius: 2vmin;
+  border-bottom-right-radius: 2vmin;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sections .section_mode .services:hover {
+  background-color: #fff;
+  color: #171717ab;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section_links {
+  width: 50%;
+  margin: 5vmin 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 2vmin;
+  background-color: rgba(128, 128, 128, 0.274);
+  color: white;
+}
+
+.section_links a {
+  width: 50%;
+  padding: 2vmin 0;
+  text-decoration: none;
+  font-size: 2.5vmin;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: all 0.5s;
+  /* color: white; */
+}
+
+.section_links a:hover {
+  border-radius: 2vmin;
+  background-color: #fff;
+  color: #171717ab;
+}
+
+.buy,
+.rent,
+.sell,
+.pgs {
+  color: white;
+}
+
+.commercial {
+  border-radius: 2vmin;
+  background-color: #fff;
+  color: #171717ab;
+}
+
+.search_bar {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 2vmin;
+  background-color: white;
+}
+
+.search_bar input {
+  width: 100%;
+  padding: 2.1vmin 2vmin 2.5vmin 3vmin;
+  /* border: 1px solid #ccc; */
+  border: none;
+  font-size: 2.5vmin;
+  /* border-radius: 1vmin; */
+  color: #637A9F;
+  transition: all 0.3s ease;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  border-radius: 2vmin;
+}
+
+.search_bar input:focus {
+  outline: none;
+  /* border-color: lightseagreen;
+  box-shadow: 0 0 8px rgba(102, 200, 233, 0.6); */
+}
+
+.search_bar i {
+  font-size: 3vmin;
+  color: gray;
+  padding: 1vmin 1.5vmin;
+  margin-right: 2vmin;
+  /* border: 1px solid #ccc; */
+}
+
+.property_posting {
+  width: 50%;
+  margin: 5vmin auto;
+  padding: 2vmin 0;
+  border-radius: 2vmin;
+  text-align: center;
+  color: white;
+  font-size: 2.5vmin;
+  letter-spacing: 0.5px;
+  background-color: rgba(128, 128, 128, 0.274);
+}
+
+@media (max-width: 700px) {
+  .hero_section {
+    display: flex;
+    flex-direction: column;
+    background-color: lightcoral;
+
+    padding: 7vmin 7vmin;
+    height: 130vw;
+    min-height: 120vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero_section .hero_top_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .location {
+    background-color: rgba(128, 128, 128, 0.274);
+    padding: 1.3vmin 2vmin;
+    border-radius: 1vmin;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+
+    font-size: 3.6vmin;
+  }
+
+  .location i {
+    font-size: 3vmin;
+    padding-right: 1vmin;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .user .list_property {
+    background-color: rgba(128, 128, 128, 0.274);
+    border-radius: 1vmin;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-right: 4vmin;
+
+    padding: 1.5vmin 2vmin;
+    font-size: 3.6vmin;
+  }
+
+  .user i {
+    background-color: rgba(128, 128, 128, 0.274);
+    border-radius: 1vmin;
+    color: white;
+
+    padding: 2vmin;
+    font-size: 3.6vmin;
+  }
+
+  .hero_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 16vmin;
+  }
+
+  .hero_text h1 {
+    font-size: 8vmin;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 2vmin;
+  }
+
+  .hero_text p {
+    color: white;
+    font-size: 4vmin;
+    letter-spacing: 1px;
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .sections .section_mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    width: 75%;
+  }
+
+  .sections .section_mode a {
+    width: 50%;
+    text-decoration: none;
+    padding: 2.5vmin 0;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+
+    font-size: 3.8vmin;
+  }
+
+  .sections .section_mode .real_estate {
+    background-color: #fff;
+    border-top-left-radius: 2vmin;
+    border-bottom-left-radius: 2vmin;
+    color: #171717ab;
+  }
+
+  .sections .section_mode .services {
+    background-color: rgba(128, 128, 128, 0.274);
+    border-top-right-radius: 2vmin;
+    border-bottom-right-radius: 2vmin;
+    color: white;
+  }
+
+  .sections .section_mode .services:hover {
+    background-color: #fff;
+    color: #171717ab;
+  }
+
+  .section_links {
+    margin: 5vmin 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 2vmin;
+    background-color: rgba(128, 128, 128, 0.274);
+    color: white;
+
+    width: 100%;
+  }
+
+  .section_links a {
+    width: 50%;
+    padding: 2vmin 2vmin;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+    /* color: white; */
+    
+    font-weight: 300;
+    font-size: 3.8vmin;
+  }
+
+  .section_links a:hover {
+    border-radius: 2vmin;
+    background-color: #fff;
+    color: #171717ab;
+  }
+
+  .buy,
+  .rent,
+  .sell,
+  .pgs {
+    color: white;
+  }
+
+  .commercial {
+    border-radius: 2vmin;
+    background-color: #fff;
+    color: #171717ab;
+  }
+
+  .search_bar {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 2vmin;
+    background-color: white;
+
+    width: 100%;
+  }
+
+  .search_bar input {
+    width: 100%;
+    /* border: 1px solid #ccc; */
+    border: none;
+    /* border-radius: 1vmin; */
+    color: #637A9F;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border-radius: 2vmin;
+    
+    padding: 2.5vmin 2vmin 3.5vmin 4vmin;
+    font-weight: 350;
+    font-size: 3.5vmin;
+  }
+
+  .search_bar input:focus {
+    outline: none;
+    /* border-color: lightseagreen;
+    box-shadow: 0 0 8px rgba(102, 200, 233, 0.6); */
+  }
+
+  .search_bar i {
+    color: gray;
+    padding: 1vmin 1.5vmin;
+    margin-right: 2vmin;
+    /* border: 1px solid #ccc; */
+
+    font-size: 3.5vmin;
+  }
+
+  .property_posting {
+    margin: 5vmin auto;
+    border-radius: 2vmin;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.5px;
+    background-color: rgba(128, 128, 128, 0.274);
+
+    width: 100%;
+    font-size: 3.5vmin;
+    padding: 3.5vmin 0;
   }
 }
+
+/* =========================== Hero Section - End =========================== */
+
+
+
+/* =========================== Popular Landmarks - Start =========================== */
+
+.popular_landmarks {
+  padding: 12vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.popular_landmarks_heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.popular_landmarks_heading p {
+  font-size: 4vmin;
+  color: #171717;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.popular_landmarks_heading i {
+  font-size: 4vmin;
+  color: #171717;
+  margin-right: 2vmin;
+}
+
+.landmarks_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 4vmin;
+}
+
+.landmark {
+  background-color: gray;
+  color: white;
+  padding: 3vmin;
+  border-radius: 1vmin;
+  margin-right: 4vmin;
+}
+
+.post_your_property {
+  padding: 12vmin;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.brokerage_banner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 6vmin;
+  background-color: rgba(173, 216, 230, 0.64);
+  border-radius: 2vmin;
+}
+
+.brokerage_banner img {
+  width: 15vw;
+  margin-right: 8vmin;
+}
+
+.content h4 {
+  font-size: 8vmin;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 3vmin;
+}
+
+.content p {
+  font-size: 3.5vmin;
+  letter-spacing: 1px;
+}
+
+.post_property_link {
+  width: 100%;
+  padding: 4vmin;
+  background-color: rgba(173, 216, 230, 0.64);
+  border-radius: 2vmin;
+  margin-top: 6vmin;
+  text-align: center;
+}
+
+.post_property_link a {
+  text-decoration: none;
+  font-size: 4.5vmin;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #171717
+}
+
+
+@media (max-width: 700px) {
+  .popular_landmarks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+
+    padding: 7vmin;
+  }
+
+  .popular_landmarks_heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .popular_landmarks_heading p {
+    color: #171717;
+    
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    font-size: 4.5vmin;
+  }
+
+  .popular_landmarks_heading i {
+    font-size: 4vmin;
+    color: #171717;
+    margin-right: 2vmin;
+  }
+
+  .landmarks_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    margin-top: 4vmin;
+  }
+
+  .landmark {
+    background-color: gray;
+    color: white;
+    padding: 3vmin;
+    border-radius: 1vmin;
+    margin-right: 3vmin;
+    margin-bottom: 3vmin;
+
+    font-size: 3.3vmin;
+    letter-spacing: 0.75px;
+    font-weight: 300;
+  }
+
+  .post_your_property {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    align-content: center;
+    padding:7vmin;
+  }
+
+  .brokerage_banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 6vmin;
+    background-color: rgba(173, 216, 230, 0.64);
+    border-radius: 2vmin;
+
+    flex-direction: column;
+  }
+
+  .brokerage_banner img {
+    width: 45vw;
+    margin-right: 0vmin;
+  }
+
+  .content h4 {
+    font-size: 6vmin;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 3vmin;
+    margin-top: 4vmin;
+  }
+
+  .content p {
+    font-size: 4vmin;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+  }
+
+  .post_property_link {
+    width: 100%;
+    padding: 4vmin;
+    background-color: rgba(173, 216, 230, 0.64);
+    border-radius: 2vmin;
+    margin-top: 6vmin;
+    text-align: center;
+  }
+
+  .post_property_link a {
+    text-decoration: none;
+    color: #171717;
+    font-size: 5.5vmin;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+}
+
+
+
+
+
+
+/* =========================== Popular Landmarks - End =========================== */
+
+
+
+/* =========================== Download App - Start =========================== */
+
+.download_app {
+  padding: 6vmin 12vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.download_app h1 {
+  font-weight: 400;
+  margin-bottom: 2vmin;
+}
+
+.download_app p {
+  font-size: 2.6vmin;
+  letter-spacing: 1px;
+}
+
+.download_button a {
+  text-decoration: none;
+  background-color: coral;
+  color: white;
+  padding: 2vmin;
+  border-radius: 1vmin;
+  font-size: 3vmin;
+
+}
+
+@media (max-width: 700px) {
+  .download_app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    padding: 6vmin 7vmin;
+  }
+  
+  .download_app h1 {
+    margin-bottom: 2vmin;
+    
+    font-size: 3.5vmin;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+  }
+  
+  .download_app p {
+    letter-spacing: 0.2px;
+    font-size: 2.8vmin;
+    font-weight: 300;
+  }
+  
+  .download_button a {
+    text-decoration: none;
+    background-color: coral;
+    color: white;
+    padding: 2vmin;
+    border-radius: 1vmin;
+    font-size: 3vmin;
+  
+  } 
+}
+
+/* =========================== Download App - End =========================== */
+
+
+
+
+/* =========================== App Excluseive Properties - Start =========================== */
+
+.app_exclusive_properties {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: lightcoral;
+
+  padding: 7vmin;
+}
+
+.properties_header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: center;
+
+  justify-content: space-between;
+}
+
+.properties_header h2 {
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 2vmin;
+
+  font-size: 8vmin;
+}
+
+.properties_header p {
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  color: white;
+  font-size: 3vmin;
+}
+
+.properties_header img {
+  border-radius: 2vmin;
+  width: 23vw;
+}
+
+.properties_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 8vmin 0;
+
+  flex-direction: column;
+}
+
+.property {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+  border-radius: 2vmin;
+
+  height: 35vmin;
+  width: 100%;
+  margin-bottom: 7vmin;
+}
+
+.property img {
+  margin-right: 4vmin;
+  
+  width: 35vw;
+}
+
+.property h1 {
+  font-size: 4.8vmin;
+  margin-bottom: 1.5vmin;
+
+  letter-spacing: 0.3px;
+  font-weight: 350;
+}
+
+.property h5 {
+  font-size: 2.5vmin;
+  margin-bottom: 1.5vmin;
+
+  letter-spacing: 0.3px;
+  font-weight: 300;
+}
+
+.property p {
+  font-size: 2.2vmin;
+  font-weight: 400;
+  color: coral;
+
+  letter-spacing: 0.3px;
+}
+
+.property h4 {
+  margin-top: 2vmin;
+  letter-spacing: 1px;
+}
+
+/* =========================== App Excluseive Properties - End =========================== */
