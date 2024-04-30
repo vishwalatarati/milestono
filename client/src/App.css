@@ -907,3 +907,108 @@ html {
 }
 
 /* =========================== App Excluseive Properties - End =========================== */
+
+
+/* =========================== Login/Sign up - Start =========================== */
+.app{
+  margin: 8px;
+}
+/* Body Styles */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#fe5d62, white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  min-height: 95vh;
+  min-width: 100vw;
+}
+
+/* Login and Signup Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.inputss {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border:none;
+}
+
+.buttons {
+  background-color: #14265e;
+  color: #ffffff;
+  width: 97%;
+  padding:10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.heading{
+  text-align: center;
+  color: white;
+  margin: 20px 0 5px 0;
+}
+.sign-up {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+ 
+
+button:hover {
+  background-color: #002c5f;
+}
+
+.forgot-pass{
+  color: white;
+}
+.line-with-or {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: auto;
+  max-width: 90vw;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: black;
+  
+}
+
+.or {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.google-image{
+  margin: 7px 10px 0 0;
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 600px) {
+
+  form {
+    max-width: 100%;
+  }
+}
+/* =========================== Login/Sign up - End =========================== */
