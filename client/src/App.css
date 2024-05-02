@@ -1012,3 +1012,102 @@ button:hover {
   }
 }
 /* =========================== Login/Sign up - End =========================== */
+
+.property-type-selection {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 500px;
+  margin: auto;
+}
+
+.property-type-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.category {
+  margin-bottom: 10px;
+}
+
+.category-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  background-color: #ffcccc;
+  color: #000;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #ff6666;
+  color: #fff;
+}
+
+.selected-options {
+  margin-top: 10px;
+}
+
+.selected-option {
+  background-color: #ffcccc;
+  color: #000;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.remove-option {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+
+.contact-details input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.next-button {
+  background-color:  #ff6666;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 20px 35%;
+}
+
+.next-button:hover {
+  background-color: #ff6666;
+}
+
+@media screen and (max-width: 600px) {
+
+  .property-type-selection {
+    width: 100%;
+  }
+}
