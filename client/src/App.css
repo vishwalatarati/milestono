@@ -973,10 +973,6 @@ label {
 }
  
 
-button:hover {
-  background-color: #002c5f;
-}
-
 .forgot-pass{
   color: white;
 }
@@ -1023,10 +1019,14 @@ button:hover {
   margin: auto;
 }
 
+.category-type{
+  display: flex;
+}
+
 .property-type-heading {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .category {
@@ -1036,7 +1036,12 @@ button:hover {
 .category-title {
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.selectedcat{
+  border-bottom:3px solid #ff6666;
 }
 
 .options {
@@ -1098,8 +1103,14 @@ button:hover {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin: 20px 35%;
+  margin: 20px;
 }
+
+.next-button {
+  display: block;
+  margin: 20px auto; 
+}
+
 
 .next-button:hover {
   background-color: #ff6666;
@@ -1110,4 +1121,177 @@ button:hover {
   .property-type-selection {
     width: 100%;
   }
+}
+
+
+
+
+
+.step2-container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.step2-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.step2-container h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.step2-container label {
+  display: block;
+  margin-top: 10px;
+}
+
+.step2-container input,
+.step2-container select,
+.step2-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.property-info-section button {
+  color: #ff6666;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label input{
+  width: fit-content;
+  margin-right: 5px;
+}
+
+.circle-options {
+  display: flex;
+}
+
+.circle-options label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.circle-options input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+.circle-options label {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Make it circular */
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle-options input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+
+.step-three-container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.step-indicator {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.add-photos {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-photos:hover {
+  background-color: #f8f9fa; /* Change background color on hover */
+}
+
+.drop-zone {
+  min-height: 150px; /* Set minimum height to make it visible */
+}
+
+.add-photos button {
+  padding: 10px 20px;
+  color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.uploaded-photos {
+  margin-top: 20px;
+}
+
+.uploaded-photos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.uploaded-photos ul li {
+  margin-bottom: 10px;
+}
+
+.continue-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.continue-button button {
+  padding: 15px 40px;
+  background-color: #ff6666;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.parking-list input{
+  margin-right: 5px;
 }
