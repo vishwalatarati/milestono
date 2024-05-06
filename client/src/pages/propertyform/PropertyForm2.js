@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 
-const Step2Form = () => {
+const PropertyForm2 = (prop) => {
     const [city, setCity] = useState('');
     const [bedrooms, setBedrooms] = useState('');
     const [bathrooms, setBathrooms] = useState('');
     const [balconies, setBalconies] = useState('');
-    const [ownership, setOwnership] = useState('');
     const [expectedPrice, setExpectedPrice] = useState('');
     const [priceInWords, setPriceInWords] = useState('');
     const [pricePerSqFt, setPricePerSqFt] = useState('');
     const [isAllInclusive, setIsAllInclusive] = useState(false);
     const [isPriceNegotiable, setIsPriceNegotiable] = useState(false);
     const [uniqueFeatures, setUniqueFeatures] = useState('');
+    const ownershipOptions = ['Freehold', 'Co-operative society', 'Leasehold', 'Power of Attorney'];
+    const [selectedOwnership, setSelectedOwnership] = useState('Co-operative society');
+
+
 
     const handleCityChange = (e) => {
         setCity(e.target.value);
@@ -29,8 +32,8 @@ const Step2Form = () => {
         setBalconies(e.target.value);
     };
 
-    const handleOwnershipChange = (e) => {
-        setOwnership(e.target.value);
+    const handleOwnershipChange = (option) => {
+        setSelectedOwnership(option);
     };
 
     const handleExpectedPriceChange = (e) => {
@@ -59,17 +62,18 @@ const Step2Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        // You can use the state variables to send data to backend or perform further actions
+        prop.handleStepInc();
     };
 
     return (
-        <div className="step2-container">
-            <h2>Basic Details of your property</h2>
-            <p>STEP 2 OF 3</p>
+        <div className="property-form">
+            <div>
+                Step 2 of 3
+            </div>
+            <h2 className='property-form-heading'>Basic Details of your property</h2>
 
             <div className="property-info-section">
-                <h3>Where is your property located?</h3>
+                <h3 className='property-form-heading2'>Where is your property located?</h3>
                 <label>
                     City:
                     <input type="text" value={city} onChange={handleCityChange} />
@@ -78,26 +82,26 @@ const Step2Form = () => {
             </div>
 
             <div className="room-details-section">
-                <h3>Add Room Details</h3>
+                <h3 className='property-form-heading2'>Add Room Details</h3>
                 No.of Bedrooms
-                <div class="circle-options">
-                    <label>
+                <div className="circle-options">
+                    <label className={bedrooms === '1' ? "selected" : ""}>
                         <input type="radio" name="bedrooms" value="1" onChange={handleBedroomsChange} />
                         1
                     </label>
-                    <label>
+                    <label className={bedrooms === '2' ? "selected" : ""}>
                         <input type="radio" name="bedrooms" value="2" onChange={handleBedroomsChange} />
                         2
                     </label>
-                    <label>
+                    <label className={bedrooms === '3' ? "selected" : ""}>
                         <input type="radio" name="bedrooms" value="3" onChange={handleBedroomsChange} />
                         3
                     </label>
-                    <label>
+                    <label className={bedrooms === '4' ? "selected" : ""}>
                         <input type="radio" name="bedrooms" value="4" onChange={handleBedroomsChange} />
                         4
                     </label>
-                    <label>
+                    <label className={bedrooms === '5+' ? "selected" : ""}>
                         <input type="radio" name="bedrooms" value="5+" onChange={handleBedroomsChange} />
                         5+
                     </label>
@@ -105,46 +109,46 @@ const Step2Form = () => {
 
                 <label>
                     No. of Bathrooms:
-                    <div class="circle-options">
-                        <label>
-                            <input type="radio" name="bedrooms" value="1" onChange={handleBedroomsChange} />
+                    <div className="circle-options">
+                        <label className={bathrooms === '1' ? "selected" : ""}>
+                            <input type="radio" name="bathrooms" value="1" onChange={handleBathroomsChange} />
                             1
                         </label>
-                        <label>
-                            <input type="radio" name="bedrooms" value="2" onChange={handleBedroomsChange} />
+                        <label className={bathrooms === '2' ? "selected" : ""}>
+                            <input type="radio" name="bathrooms" value="2" onChange={handleBathroomsChange} />
                             2
                         </label>
-                        <label>
-                            <input type="radio" name="bedrooms" value="3" onChange={handleBedroomsChange} />
+                        <label className={bathrooms === '3' ? "selected" : ""}>
+                            <input type="radio" name="bathrooms" value="3" onChange={handleBathroomsChange} />
                             3
                         </label>
-                        <label>
-                            <input type="radio" name="bedrooms" value="4" onChange={handleBedroomsChange} />
+                        <label className={bathrooms === '4' ? "selected" : ""}>
+                            <input type="radio" name="bathrooms" value="4" onChange={handleBathroomsChange} />
                             4
                         </label>
-                        <label>
-                            <input type="radio" name="bedrooms" value="5+" onChange={handleBedroomsChange} />
+                        <label className={bathrooms === '5+' ? "selected" : ""}>
+                            <input type="radio" name="bathrooms" value="5+" onChange={handleBathroomsChange} />
                             5+
                         </label>
                     </div>
                 </label>
                 <label>
                     No. of Balconies:
-                    <div class="circle-options">
-                        <label>
-                            <input type="radio" name="bedrooms" value="1" onChange={handleBedroomsChange} />
+                    <div className="circle-options">
+                        <label className={balconies === '1' ? "selected" : ""}>
+                            <input type="radio" name="balconies" value="1" onChange={handleBalconiesChange} />
                             1
                         </label>
-                        <label>
-                            <input type="radio" name="bedrooms" value="2" onChange={handleBedroomsChange} />
+                        <label className={balconies === '2' ? "selected" : ""}>
+                            <input type="radio" name="balconies" value="2" onChange={handleBalconiesChange} />
                             2
                         </label>
-                        <label>
-                            <input type="radio" name="bedrooms" value="3" onChange={handleBedroomsChange} />
+                        <label className={balconies === '3' ? "selected" : ""}>
+                            <input type="radio" name="balconies" value="3" onChange={handleBalconiesChange} />
                             3
                         </label>
-                        <label>
-                            <input type="radio" name="bedrooms" value="4" onChange={handleBedroomsChange} />
+                        <label className={balconies === '4+' ? "selected" : ""}>
+                            <input type="radio" name="balconies" value="4+" onChange={handleBalconiesChange} />
                             4+
                         </label>
                     </div>
@@ -152,20 +156,25 @@ const Step2Form = () => {
             </div>
 
             <div className="basic-details-section">
-                <h3>Basic Details</h3>
+                <h3 className='property-form-heading2'>Basic Details</h3>
                 <div>
                     Ownership:
-                    <div class="options">
-                        <div class="option">Freehold</div>
-                        <div class="option selected">Co-operative society</div>
-                        <div class="option">Leasehold</div>
-                        <div class="option">Power of Attorney</div>
+                    <div className="options">
+                        {ownershipOptions.map((option) => (
+                            <div
+                                key={option}
+                                className={`option ${selectedOwnership === option ? 'selected' : ''}`}
+                                onClick={() => handleOwnershipChange(option)}
+                            >
+                                {option}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
 
             <div className="price-details-section">
-                <h3>Price Details</h3>
+                <h3 className='property-form-heading2'>Price Details</h3>
                 <label>
                     Expected Price:
                     <input type="text" value={expectedPrice} onChange={handleExpectedPriceChange} placeholder='₹ Expected Price' />
@@ -201,7 +210,7 @@ const Step2Form = () => {
             </div>
 
             <div className="unique-features-section">
-                <h3>What makes your property unique</h3>
+                <h3 className='property-form-heading2'>What makes your property unique</h3>
                 <p>Adding description will increase your listing visibility</p>
                 <textarea
                     value={uniqueFeatures}
@@ -212,9 +221,10 @@ const Step2Form = () => {
                 />
             </div>
 
-            <button class="next-button" onClick={handleSubmit}>Next</button>
+            <button className="next-button" onClick={handleSubmit}>Next</button>
+
         </div>
     );
 };
 
-export default Step2Form;
+export default PropertyForm2;

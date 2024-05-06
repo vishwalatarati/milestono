@@ -74,6 +74,7 @@ html {
   letter-spacing: 1px;
   font-weight: 300;
   margin-right: 4vmin;
+  cursor: pointer;
 }
 
 .user i {
@@ -1009,13 +1010,28 @@ label {
 }
 /* =========================== Login/Sign up - End =========================== */
 
-.property-type-selection {
+
+.form-header{
+  display: flex;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.back-button{
+  margin-right: 7px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.property-form {
   font-family: Arial, sans-serif;
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
   background-color: #f9f9f9;
-  width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -1023,10 +1039,15 @@ label {
   display: flex;
 }
 
-.property-type-heading {
+.property-form-heading {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
+}
+
+.property-form-heading2 {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .category {
@@ -1118,44 +1139,16 @@ label {
 
 @media screen and (max-width: 600px) {
 
-  .property-type-selection {
+  .property-form {
     width: 100%;
   }
 }
 
 
 
-
-
-.step2-container {
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.step2-container h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.step2-container h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-
-.step2-container label {
-  display: block;
-  margin-top: 10px;
-}
-
-.step2-container input,
-.step2-container select,
-.step2-container textarea {
+.property-form input,
+.property-form select,
+.property-form textarea {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -1193,13 +1186,13 @@ label {
 }
 
 .circle-options input[type="radio"] {
-  display: none; /* Hide the default radio button */
+  display: none;
 }
 
 .circle-options label {
   width: 30px;
   height: 30px;
-  border-radius: 50%; /* Make it circular */
+  border-radius: 50%;
   border: 2px solid #ccc;
   display: flex;
   justify-content: center;
@@ -1214,28 +1207,9 @@ label {
 }
 
 
-.step-three-container {
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-.step-indicator {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 20px;
-}
 
-.section {
-  margin-bottom: 30px;
-}
-
-.section h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+.add-photo-section {
+  margin-bottom: 12px;
 }
 
 .add-photos {
@@ -1246,11 +1220,11 @@ label {
 }
 
 .add-photos:hover {
-  background-color: #f8f9fa; /* Change background color on hover */
+  background-color: #f8f9fa;
 }
 
 .drop-zone {
-  min-height: 150px; /* Set minimum height to make it visible */
+  min-height: 150px;
 }
 
 .add-photos button {
@@ -1293,5 +1267,8 @@ label {
 }
 
 .parking-list input{
+  width: fit-content;
+  padding: 8px;
+  margin-top: 10px;
   margin-right: 5px;
 }
