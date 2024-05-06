@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 function PropertyForm1({ handleStepInc }) {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const sellType = ['Sell', 'Rent', 'PG'];
+  const [selectedSell, setSelectedSell] = useState('Sell');
+
+  const handleSellSelect = (option) => {
+    setSelectedSell(option);
+  };
 
   const propertyOptions = [
     'Flats/Apartment',
@@ -41,6 +47,17 @@ function PropertyForm1({ handleStepInc }) {
       </div>
       <div className="property-form-heading">
         What Kind Of property do you have?
+      </div>
+      <div className="options">
+        {sellType.map((option) => (
+          <div
+            key={option}
+            className={`option width-30 ${selectedSell === option ? 'selected' : ''}`}
+            onClick={() => handleSellSelect(option)}
+          >
+            {option}
+          </div>
+        ))}
       </div>
       <hr />
       <div className="property-categories">

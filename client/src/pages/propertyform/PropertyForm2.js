@@ -6,10 +6,10 @@ const PropertyForm2 = (prop) => {
     const [bathrooms, setBathrooms] = useState('');
     const [balconies, setBalconies] = useState('');
     const [expectedPrice, setExpectedPrice] = useState('');
-    const [priceInWords, setPriceInWords] = useState('');
     const [pricePerSqFt, setPricePerSqFt] = useState('');
     const [isAllInclusive, setIsAllInclusive] = useState(false);
     const [isPriceNegotiable, setIsPriceNegotiable] = useState(false);
+    const [isTaxchargeExc,setIsTaxchargeExc] = useState(false);
     const [uniqueFeatures, setUniqueFeatures] = useState('');
     const ownershipOptions = ['Freehold', 'Co-operative society', 'Leasehold', 'Power of Attorney'];
     const [selectedOwnership, setSelectedOwnership] = useState('Co-operative society');
@@ -40,9 +40,6 @@ const PropertyForm2 = (prop) => {
         setExpectedPrice(e.target.value);
     };
 
-    const handlePriceInWordsChange = (e) => {
-        setPriceInWords(e.target.value);
-    };
 
     const handlePricePerSqFtChange = (e) => {
         setPricePerSqFt(e.target.value);
@@ -54,6 +51,10 @@ const PropertyForm2 = (prop) => {
 
     const handlePriceNegotiableChange = (e) => {
         setIsPriceNegotiable(e.target.checked);
+    };
+
+    const handleTaxchargeExcChange = (e) => {
+        setIsTaxchargeExc(e.target.checked);
     };
 
     const handleUniqueFeaturesChange = (e) => {
@@ -202,8 +203,8 @@ const PropertyForm2 = (prop) => {
                 <label className="checkbox-label">
                     <input
                         type="checkbox"
-                        checked={isPriceNegotiable}
-                        onChange={handlePriceNegotiableChange}
+                        checked={isTaxchargeExc}
+                        onChange={handleTaxchargeExcChange}
                     />
                     Tax and Govt.charges excluded
                 </label>

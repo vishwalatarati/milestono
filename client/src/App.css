@@ -1060,7 +1060,10 @@ label {
   margin: 5px;
   cursor: pointer;
 }
-
+.width-30{
+  width: 30%;
+  text-align: center;
+}
 .selectedcat{
   border-bottom:3px solid #ff6666;
 }
