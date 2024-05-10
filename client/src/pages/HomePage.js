@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import HomeImage from "../images/home.png";
 import PropertiesImage from "../images/properties.jpg";
 import Prop1 from "../images/prop.jpg";
+import { useNavigate  } from 'react-router-dom';
 // import Prop2 from "../images/prop2.avif";
 
 import AOS from "aos";
@@ -9,6 +10,7 @@ import "aos/dist/aos.css";
 AOS.init();
 
 function HeroSection() {
+  const navigate = useNavigate();
   return (
     <div className="hero_section">
       <div
@@ -17,11 +19,11 @@ function HeroSection() {
         data-aos-duration="1000"
       >
         <div className="location">
-          <i class="fa-solid fa-location-dot"></i> Delhi
+          <i className="fa-solid fa-location-dot"></i> Delhi
         </div>
         <div className="user">
-          <div className="list_property">List Property</div>
-          <i class="fa-solid fa-user"></i>
+          <div className="list_property" onClick={()=>{navigate('/form');}}>Post Property</div>
+          <i className="fa-solid fa-user"></i>
         </div>
       </div>
 
@@ -51,8 +53,8 @@ function HeroSection() {
 
       <div className="search_bar" data-aos="fade-in" data-aos-duration="1000">
         <input type="text" placeholder="Search Products" className="search" />
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-solid fa-filter"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-filter"></i>
       </div>
 
       <div
@@ -76,7 +78,7 @@ function PopularLandmarks() {
         data-aos="fade-in"
         data-aos-duration="1000"
       >
-        <i class="fa-solid fa-flag"></i> <p>Popular Landmarks</p>
+        <i className="fa-solid fa-flag"></i> <p>Popular Landmarks</p>
       </div>
       <div
         className="landmarks_list"

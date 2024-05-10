@@ -74,6 +74,7 @@ html {
   letter-spacing: 1px;
   font-weight: 300;
   margin-right: 4vmin;
+  cursor: pointer;
 }
 
 .user i {
@@ -907,3 +908,370 @@ html {
 }
 
 /* =========================== App Excluseive Properties - End =========================== */
+
+
+/* =========================== Login/Sign up - Start =========================== */
+.app{
+  margin: 8px;
+}
+/* Body Styles */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#fe5d62, white);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  min-height: 95vh;
+  min-width: 100vw;
+}
+
+/* Login and Signup Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.inputss {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border:none;
+}
+
+.buttons {
+  background-color: #14265e;
+  color: #ffffff;
+  width: 97%;
+  padding:10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.heading{
+  text-align: center;
+  color: white;
+  margin: 20px 0 5px 0;
+}
+.sign-up {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+ 
+
+.forgot-pass{
+  color: white;
+}
+.line-with-or {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: auto;
+  max-width: 90vw;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: black;
+  
+}
+
+.or {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.google-image{
+  margin: 7px 10px 0 0;
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 600px) {
+
+  form {
+    max-width: 100%;
+  }
+}
+/* =========================== Login/Sign up - End =========================== */
+
+
+.form-header{
+  display: flex;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.back-button{
+  margin-right: 7px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.property-form {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: auto;
+}
+
+.category-type{
+  display: flex;
+}
+
+.property-form-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.property-form-heading2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.category {
+  margin-bottom: 10px;
+}
+
+.category-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+}
+.width-30{
+  width: 30%;
+  text-align: center;
+}
+.selectedcat{
+  border-bottom:3px solid #ff6666;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  background-color: #ffcccc;
+  color: #000;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #ff6666;
+  color: #fff;
+}
+
+.selected-options {
+  margin-top: 10px;
+}
+
+.selected-option {
+  background-color: #ffcccc;
+  color: #000;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.remove-option {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+
+.contact-details input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.next-button {
+  background-color:  #ff6666;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.next-button {
+  display: block;
+  margin: 20px auto; 
+}
+
+
+.next-button:hover {
+  background-color: #ff6666;
+}
+
+@media screen and (max-width: 600px) {
+
+  .property-form {
+    width: 100%;
+  }
+}
+
+
+
+.property-form input,
+.property-form select,
+.property-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.property-info-section button {
+  color: #ff6666;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label input{
+  width: fit-content;
+  margin-right: 5px;
+}
+
+.circle-options {
+  display: flex;
+}
+
+.circle-options label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.circle-options input[type="radio"] {
+  display: none;
+}
+
+.circle-options label {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.circle-options input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+
+
+.add-photo-section {
+  margin-bottom: 12px;
+}
+
+.add-photos {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-photos:hover {
+  background-color: #f8f9fa;
+}
+
+.drop-zone {
+  min-height: 150px;
+}
+
+.add-photos button {
+  padding: 10px 20px;
+  color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.uploaded-photos {
+  margin-top: 20px;
+}
+
+.uploaded-photos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.uploaded-photos ul li {
+  margin-bottom: 10px;
+}
+
+.continue-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.continue-button button {
+  padding: 15px 40px;
+  background-color: #ff6666;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.parking-list input{
+  width: fit-content;
+  padding: 8px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
