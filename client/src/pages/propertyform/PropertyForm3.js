@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PropertyForm3 = (prop) => {
+const PropertyForm3 = ({formData, handleFormData}) => {
     const [uploadedPhotos, setUploadedPhotos] = useState([]);
     const furnishingOptions = ['Unfurnished', 'Semi-Furnished', 'Furnished'];
     const [selectedFurnishing, setSelectedFurnishing] = useState('Semi-Furnished');

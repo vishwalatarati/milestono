@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function PropertyForm1({ handleStepInc }) {
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedOptions, setSelectedOptions] = useState([]);
+function PropertyForm1({ handleStepInc, formData, handleFormData }) {
   const sellType = ['Sell', 'Rent', 'PG'];
-  const [selectedSell, setSelectedSell] = useState('Sell');
 
-  const handleSellSelect = (option) => {
-    setSelectedSell(option);
-  };
-
-  const propertyOptions = [
+  const propertyContains = [
     'Flats/Apartment',
     'Independent House/Villa',
     'Independent/Builder Floor',
@@ -21,19 +14,15 @@ function PropertyForm1({ handleStepInc }) {
     'Other'
   ];
 
-  const handleCategorySelect = (category) => {
-    setSelectedCategory(category);
-  };
-
   const handleOptionSelect = (option) => {
-    if (!selectedOptions.includes(option)) {
-      setSelectedOptions([...selectedOptions, option]);
+    if (!formData.propertyContains.includes(option)) {
+      handleFormData("propertyContains",[...formData.propertyContains, option]);
     }
   };
 
   const handleOptionRemove = (optionToRemove) => {
-    const updatedOptions = selectedOptions.filter((option) => option !== optionToRemove);
-    setSelectedOptions(updatedOptions);
+    const updatedOptions = formData.propertyContains.filter((option) => option !== optionToRemove);
+    handleFormData("propertyContains",updatedOptions);
   };
 
   const handleNext = () => {
@@ -52,8 +41,8 @@ function PropertyForm1({ handleStepInc }) {
         {sellType.map((option) => (
           <div
             key={option}
-            className={`option width-30 ${selectedSell === option ? 'selected' : ''}`}
-            onClick={() => handleSellSelect(option)}
+            className={`option width-30 ${formData.sellType === option ? 'selected' : ''}`}
+            onClick={() => handleFormData("sellType",option)}
           >
             {option}
           </div>
@@ -64,14 +53,14 @@ function PropertyForm1({ handleStepInc }) {
         <div className="category residential">
           <div className='category-type'>
             <div
-              className={`category-title ${selectedCategory === 'Residential' ? 'selectedcat' : ''}`}
-              onClick={() => handleCategorySelect('Residential')}
+              className={`category-title ${formData.propertyCategory === 'Residential' ? 'selectedcat' : ''}`}
+              onClick={() => handleFormData("propertyCategory",'Residential')}
             >
               Residential
             </div>
             <div
-              className={`category-title ${selectedCategory === 'Commercial' ? 'selectedcat' : ''}`}
-              onClick={() => handleCategorySelect('Commercial')}
+              className={`category-title ${formData.propertyCategory === 'Commercial' ? 'selectedcat' : ''}`}
+              onClick={() => handleFormData("propertyCategory",'Commercial')}
             >
               Commercial
             </div>
@@ -79,10 +68,10 @@ function PropertyForm1({ handleStepInc }) {
           <hr />
           <br />
           <div className="options">
-            {propertyOptions.map((option) => (
+            {propertyContains.map((option) => (
               <div
                 key={option}
-                className={`option ${selectedOptions.includes(option) ? 'selected' : ''}`}
+                className={`option ${formData.propertyContains.includes(option) ? 'selected' : ''}`}
                 onClick={() => handleOptionSelect(option)}
               >
                 {option}
@@ -93,7 +82,7 @@ function PropertyForm1({ handleStepInc }) {
             <div class="category-title">Your Selected</div>
           </div>
           <div className="selected-options">
-            {selectedOptions.map((option) => (
+            {formData.propertyContains.map((option) => (
               <div key={option} className="selected-option">
                 {option} <span className="remove-option" onClick={() => handleOptionRemove(option)}>×</span>
               </div>
@@ -106,7 +95,8 @@ function PropertyForm1({ handleStepInc }) {
         <input
           type="text"
           placeholder="Phone Number / Email / Username"
-          onChange={(e) => console.log(e.target.value)}
+          value={formData.email}
+          onChange={(e) => handleFormData("email",e.target.value)}
         />
       </div>
       <button className="next-button" onClick={handleNext}>Next</button>
